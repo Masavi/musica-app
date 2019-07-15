@@ -1,13 +1,13 @@
 import React from 'react';
-import HolaMundo from './Components/HolaMundo';
+import Contadores from './Components/Contadores';
+import { Container } from 'reactstrap';
 
 function App() {
   return (
-    <React.Fragment>
-      <h1>Hola Mundo</h1>
-      <p>lorem ipsum dolor sit amet</p>
-      <HolaMundo />
-    </React.Fragment>
+      <Container className='mt-4'>
+        <h1>Contadores</h1>
+        <Contadores />
+      </Container>
   );
 }
 
