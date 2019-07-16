@@ -43,6 +43,7 @@ class Contador extends Component {
     render() { 
         return (
             <div style={{
+                marginBottom: '10px',
                 padding: '10px',
                 borderRadius: '10px',
                 width:'18em',
@@ -61,6 +62,7 @@ class Contador extends Component {
                         onClick={ this.decrementarContador } 
                         color='danger'>-</Button>
                     <Button
+                        onClick={ () => this.props.borrar(this.props.id) }
                         className='ml-4' 
                         color='warning'>Eliminar</Button>
                 </Row>

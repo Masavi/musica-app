@@ -10,15 +10,23 @@ class Contadores extends Component {
         ]
     }
 
+    eliminarContador = (id) => {
+        const nuevosContadores = this.state.contadores.filter( contador => contador.id !== id );
+        this.setState({
+            contadores: nuevosContadores
+        });
+    }
+
     render() { 
-        return ( 
+        return (
             <React.Fragment>
-                { /* */ }
                 { this.state.contadores.map( contador => {
-                    return <Contador 
+                    return <Contador
+                                id={contador.id}
                                 key={contador.id}
                                 titulo={contador.titulo} 
-                                valor={contador.valor} />
+                                valor={contador.valor} 
+                                borrar={this.eliminarContador} />
                 })}
             </React.Fragment>
         );
