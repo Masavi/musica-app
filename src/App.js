@@ -1,12 +1,11 @@
 import React from 'react';
-import Contadores from './Components/Contadores';
+import Artistas from './Components/Artistas';
 import { Container } from 'reactstrap';
 
 function App() {
   return (
       <Container className='mt-4'>
-        <h1>Contadores</h1>
-        <Contadores />
+        <Artistas />
       </Container>
   );
 }
